@@ -18,7 +18,7 @@ EXPOSE 5000
 
 VOLUME /srv/fail2rest/ /var/run/fail2ban/
 
-COPY --from=builder	/root/go/bin/fail2rest /usr/bin/fail2rest
+COPY --from=builder	/go/bin/fail2rest /usr/bin/fail2rest
 COPY docker-entrypoint.sh /entrypoint.sh
 
 RUN chmod 755 /entrypoint.sh
